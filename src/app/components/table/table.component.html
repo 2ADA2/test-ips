@@ -1,0 +1,45 @@
+<table>
+  <thead>
+  <tr>
+    <th (click)="sortTable('address')">Адрес назначения
+      @if (sortType === "address") {
+        @if(isDown){
+          <i class="material-icons arrow">arrow_drop_down</i>
+        } @else{
+          <i class="material-icons arrow">arrow_drop_up</i>
+        }
+
+      }
+    </th>
+    <th (click)="sortTable('gateway')">Шлюз
+      @if (sortType === "gateway") {
+        @if(isDown){
+          <i class="material-icons arrow">arrow_drop_down</i>
+        } @else{
+          <i class="material-icons arrow">arrow_drop_up</i>
+        }
+
+      }
+    </th>
+    <th (click)="sortTable('interface')">Интерфейс
+      @if (sortType === "interface") {
+        @if(isDown){
+          <i class="material-icons arrow">arrow_drop_down</i>
+        } @else{
+          <i class="material-icons arrow">arrow_drop_up</i>
+        }
+
+      }
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (row of tdata; track row.uuid) {
+      <tr>
+        <td>{{ row.address }}/{{ row.mask }}</td>
+        <td>{{ row.gateway }}</td>
+        <td>{{ row.interface }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

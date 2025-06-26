@@ -1,0 +1,41 @@
+table {
+  padding: 10px;
+  border-collapse: collapse;
+  font-size: 14px;
+  width:100%;
+
+  & th, td {
+    font-weight: 100;
+    width: 33.33%;
+  }
+
+  & thead{
+    background: rgb(235,235,240);
+    user-select: none;
+    & th{
+      position: relative;
+      padding: 10px 10px;
+      text-align: start;
+      font-weight: 500;
+      & .arrow{
+        position: absolute;
+        right:10px;
+        top:5px;
+        color: #807e7e;
+        font-size: 28px;
+      }
+      &:hover{
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  & tbody{
+    & tr{
+      border-bottom: 2px solid rgb(235,235,240);
+      & td{
+        height: 40px;
+      }
+    }
+  }
+}
