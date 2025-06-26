@@ -26,17 +26,17 @@ export class TableComponent {
     switch (type) {
       case "address":
         newTable.sort((a: Route, b: Route) => {
-          return (a.address > b.address) ? 1 : -1
+          return (a.address < b.address) ? 1 : -1
         })
         break;
       case "gateway":
         newTable.sort((a: Route, b: Route) => {
-          return (a.gateway > b.gateway) ? 1 : -1
+          return (a.gateway < b.gateway) ? 1 : -1
         })
         break;
       case "interface":
         newTable.sort((a: Route, b: Route) => {
-            return (a.interface > b.interface) ? 1 : -1
+            return (a.interface < b.interface) ? 1 : -1
           }
         )
         break;
